@@ -1,0 +1,17 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: blogtest
+  password: szczutkowo
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: blogtest_development
+
+test:
+  <<: *default
+  database: blogtest_test

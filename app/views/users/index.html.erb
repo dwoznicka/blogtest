@@ -1,0 +1,12 @@
+<h1> Users' list</h1>
+<br />
+<%= link_to "Create new user", new_user_path %> 
+<br />
+<ul> 
+    <%= @users.each do |user| %> 
+        <li> 
+            <%= user.login + " " + user.email + " " + user.age.to_s + " " %> 
+            <%= button_to "Show this one", user_path(:method )%>
+        </li> 
+    <% end %> 
+</ul>
