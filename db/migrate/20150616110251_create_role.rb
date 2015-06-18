@@ -5,7 +5,7 @@ class CreateRole < ActiveRecord::Migration
   		t.timestamps
     end
 
-    create_table :users_roles do |t|
+    create_table :roles_users do |t|
     	t.belongs_to :user
     	t.belongs_to :role
     	t.timestamps

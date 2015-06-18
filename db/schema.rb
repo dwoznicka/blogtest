@@ -53,18 +53,18 @@ ActiveRecord::Schema.define(version: 20150616110849) do
     t.datetime "updated_at"
   end
 
+  create_table "roles_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "login"
     t.string   "password"
     t.string   "email"
     t.integer  "age"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users_roles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
