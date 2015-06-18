@@ -1,0 +1,7 @@
+<h3> <%= @comment.user_id %> wrote: </h3>
+<br /> 
+<h4> <%= @comment.content %> </h4>
+<br />
+<h5> Under post: <%= @comment.post_id %> </h5>
+<br /> <br />
+<%= link_to "Back", comments_path %>
