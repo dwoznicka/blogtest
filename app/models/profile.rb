@@ -6,7 +6,7 @@ class Profile < ActiveRecord::Base
 	validates :hits, numericality: { only_integer: true }
 
 	after_create :set_hits_to_zero
-    after_touch :add_hit
+    after_find :add_hit
 
     scope :popular, -> { where("hits>100") }
 

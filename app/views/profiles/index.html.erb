@@ -1,0 +1,13 @@
+<h1> All profiles </h1>
+
+<ul> 
+    <% @profiles.each do |profile| %> 
+        <li> 
+           <%= profile.user_id %> 
+           <%= link_to "Show", profile %>
+           <%= link_to "Edit this profile", edit_profile_path(profile) %>
+           <%= link_to "Delete this profile", profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li> 
+    <% end %> 
+</ul>
+<%= link_to "Back to users", users_path %>

@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
-	has_many :posts
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+       :trackable, :validatable
+
+    has_many :posts
 	has_and_belongs_to_many :roles
 	has_one :profile
 	has_many :comments
@@ -7,7 +12,7 @@ class User < ActiveRecord::Base
 
 	validates :login, presence: true, length: { maximum: 30 }, format: /[a-z A-Z 0-9]*/, uniqueness: true, 
 				exclusion: { in: %w(admin superuser) }
-	validates :password, presence: true, length: { maximum: 80 }, format: /[a-z A-Z 0-9]*/
+	validates :encrypted_password, presence: true, length: { maximum: 80 }, format: /[a-z A-Z 0-9]*/
 	validates :email, presence: true, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}, uniqueness: true
 	validates :age, inclusion: {in: 1..100}, numericality: true
 
@@ -23,5 +28,4 @@ class User < ActiveRecord::Base
         self.login = email unless email.blank?
       end
     end
-
 end

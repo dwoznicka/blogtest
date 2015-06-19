@@ -1,3 +1,5 @@
+<%= render "layouts/partials/headerpart" %>
+
 <h1> Posts dashboard </h1>
 <br />
 <%= link_to "Create new post", new_post_path %>
@@ -12,6 +14,8 @@
         </li> 
     <% end %> 
 </ul>
+<%= link_to "Show all favourites", favourites_path %>
+<br />
 <%= link_to "Show all comments", comments_path %>
 <br />
 <%= link_to "Back to users list", users_path %>
