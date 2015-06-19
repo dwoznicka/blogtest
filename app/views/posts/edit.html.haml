@@ -1,0 +1,10 @@
+%h1 Editpost
+= form_for(@post) do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :content
+    = f.text_area :content
+  .actions
+    = f.submit "Add!"

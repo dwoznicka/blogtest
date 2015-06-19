@@ -1,0 +1,14 @@
+%h1 New profile
+= form_for(@profile) do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :hits
+    = f.number_field :hits
+  .field
+    = f.label :user_id
+    %br/
+    = f.number_field :user_id
+  .actions
+    = f.submit "Save!"

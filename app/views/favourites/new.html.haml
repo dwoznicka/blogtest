@@ -1,0 +1,12 @@
+%h1 Like this
+= form_for(@favourite) do |f|
+  .field
+    = f.label :user_id
+    %br/
+    = f.number_field :user_id
+  .field
+    = f.label :post_id
+    %br/
+    = f.number_field :post_id
+  .actions
+    = f.submit "Like!"

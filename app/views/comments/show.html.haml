@@ -1,0 +1,12 @@
+%h3
+  = @comment.user_id
+  wrote:
+%br/
+%h4
+  = @comment.content
+%br/
+%h5
+  Under post: #{@comment.post_id}
+%br/
+%br/
+= link_to "Back", comments_path

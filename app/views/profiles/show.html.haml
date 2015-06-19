@@ -1,0 +1,11 @@
+%h1
+  = @profile.user_id
+  's profile
+%h2
+  = @profile.title
+%br/
+%h5
+  Hits: #{@profile.hits.to_s}
+%h6
+  Created at #{@profile.created_at.to_s}
+= link_to "Back", profiles_path

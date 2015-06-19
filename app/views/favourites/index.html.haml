@@ -1,0 +1,8 @@
+%h1 Look all the favourites!
+%ul
+  - @favourites.each do |favourite|
+    %li
+      = favourite.user_id
+      likes #{favourite.post_id}
+      \#{link_to "Delete this favourite", favourite, method: :delete, data: { confirm: 'Are you sure?' }}
+= link_to "Back to posts", posts_path

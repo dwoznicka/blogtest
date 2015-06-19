@@ -1,0 +1,7 @@
+%h1 Edit role
+= form_for(@role) do |f|
+  .field
+    = f.label :role_name
+    = f.text_field :role_name
+  .actions
+    = f.submit "Save!"

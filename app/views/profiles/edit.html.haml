@@ -1,0 +1,10 @@
+%h1 Edit profile
+= form_for(@profile) do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :hits
+    = f.number_field :hits
+  .actions
+    = f.submit "Save!"
