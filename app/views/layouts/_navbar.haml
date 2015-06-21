@@ -10,8 +10,6 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          = link_to current_user.email.to_s , current_user
-        %li
           = link_to 'Register', new_user_registration_path
         %li
           - if user_signed_in?

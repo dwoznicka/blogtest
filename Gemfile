@@ -17,6 +17,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails','~> 3.0.0'
+  gem 'shoulda-matchers', require: false
 end
 
 gem 'rails_12factor', group: :production
