@@ -5,6 +5,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %nav.navbar{ id: current_user ? 'active' :nil }
+    %nav.navbar.navbar-fixed-top{ id: current_user ? 'active' :nil }
       =render 'layouts/navbar'
+    %div.container
       = yield 

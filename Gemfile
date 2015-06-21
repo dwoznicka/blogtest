@@ -23,6 +23,7 @@ end
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'haml-rails'
+gem 'bootstrap-sass',       '3.2.0.0'
 
 source 'https://rails-assets.org' do
 	gem 'rails-assets-bootstrap-sass'
